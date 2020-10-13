@@ -2,11 +2,13 @@
 const start = document.getElementById("start");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
-var choiceA = document.getElementById("A");
-var choiceB = document.getElementById("B");
-var choiceC = document.getElementById("C");
+const choices = document.getElementById("choices");
+const choiceA = document.getElementById("A");
+const choiceB = document.getElementById("B");
+const choiceC = document.getElementById("C");
 const counter = document.getElementById("counter");
 const scoreDiv = document.getElementById("scoreContainer");
+const end = document.getElementById("end");
 
 // CREATING QUESTIONS
 let questions = [
@@ -85,7 +87,7 @@ function startQuiz(){
 // FUNCTION FOR RENDERING TIMER
 function renderCounter() {
     let seconds = timer;
-    counter.innerHTML = "<p>" + 'Timer:' + `${seconds}` +"</p>";
+    counter.innerHTML = "<p>" + 'Timer:' +'00:'+ `${seconds}` +"</p>";
     timer--;
     // END QUIZ IF TIMER HITS ZERO
     if (timer == -1){
@@ -109,18 +111,32 @@ function checkAnswer(answer){
         runningQuestion++;
         renderQuestion();
     }
+    else if (runningQuestion == lastQuestion) {
+    // end the quiz and show the score
+        question.style.display = "none";
+        choices.style.display = "none";
+        counter.style.display = "none";
+        scoreRender();
+        end.style.display = "";
+    }
 }
 
 // FUNCTION FOR CORRECT ANSWER
 function answerIsCorrect(){
     timer += 5;
-    counter.innerHTML = '00:'+timer;
+    counter.innerHTML = "<p>"+ 'Timer:' +'00:'+timer +"</p>";
 }
 
 // FUNCTION FOR INCORRECT ANSWER
 function answerIsWrong(){
     timer -= 5;
-    counter.innerHTML ='00:'+timer;
+    counter.innerHTML = "<p>"+ 'Timer:' +'00:'+timer +"</p>";
 }
+
+// FUNCTION FOR RENDERING SCORE
+function scoreRender(){
+    scoreDiv.style.display = "block";
     
+    scoreDiv.innerHTML += "<p>"+ 'Your final score is' + ' ' +timer + '!' +"</p>";
+}
     
