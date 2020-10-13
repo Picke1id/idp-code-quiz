@@ -36,9 +36,19 @@
                         <div class="choice" id="A" onclick="checkAnswer('A')"></div>
                         <div class="choice" id="B" onclick="checkAnswer('B')"></div>
                         <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                    </div> 
+                    <!-- PLACEHOLDER TO INPUT INITIALS AND SAVE FINAL SCORE -->
+                    <div id="end" style="display: none">
+                        <!-- H3-->
+                        <h3 id="end-text"> All Done! </h3> 
+                        <!-- PLACEHOLDER TO VIEW SCORE -->
+                        <div id="scoreContainer" style="display: none"></div>
+                        <form class="end-form-container">
+                            <input type="text" name="name" id="userinitials" placeholder="Enter your initials">
+                            <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)">Save</button>
+                        </form>
+                        <div id="highscores" style="display: none"></div>    
                     </div>
-                    <!-- PLACEHOLDER TO VIEW SCORES -->
-                    <div id="scoreContainer" style="display: none"></div>
                 </div>
                 <div class="card-footer">
                     <!-- START BUTTON FOR QUIZ-->
