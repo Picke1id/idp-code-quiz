@@ -2,9 +2,9 @@
 const start = document.getElementById("start");
 const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
-const choiceA = document.getElementById("A");
-const choiceB = document.getElementById("B");
-const choiceC = document.getElementById("C");
+var choiceA = document.getElementById("A");
+var choiceB = document.getElementById("B");
+var choiceC = document.getElementById("C");
 const counter = document.getElementById("counter");
 const scoreDiv = document.getElementById("scoreContainer");
 
@@ -56,6 +56,7 @@ let runningQuestion = 0;
 let lastQuestion = questions.length - 1;
 const startTime = 30;
 let timer = startTime;
+let count = 0;
 
 // FUNCTION FOR RENDERING QUESTION
 function renderQuestion(){
@@ -86,10 +87,40 @@ function renderCounter() {
     let seconds = timer;
     counter.innerHTML = "<p>" + 'Timer:' + `${seconds}` +"</p>";
     timer--;
-
+    // END QUIZ IF TIMER HITS ZERO
     if (timer == -1){
         alert("GAME OVER");
         clearInterval(clock);
     }
 }
+
+// FUNCTION FOR CHECKING ANSWERS
+function checkAnswer(answer){
+    if( answer == questions[runningQuestion].correct){
+        // answer is correct
+        answerIsCorrect();
+    }
+    else{
+        // answer is wrong
+        answerIsWrong();
+    }
+    count = 0;
+    if(runningQuestion < lastQuestion){
+        runningQuestion++;
+        renderQuestion();
+    }
+}
+
+// FUNCTION FOR CORRECT ANSWER
+function answerIsCorrect(){
+    timer += 5;
+    counter.innerHTML = '00:'+timer;
+}
+
+// FUNCTION FOR INCORRECT ANSWER
+function answerIsWrong(){
+    timer -= 5;
+    counter.innerHTML ='00:'+timer;
+}
+    
     
