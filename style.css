@@ -64,7 +64,28 @@ header {
   cursor: pointer;
 }
 
+/* STYLING FOR TIMER */
 #counter {
   text-align: right;
 }
 
+/* STYLING FOR H3 */
+#end-text {
+  padding: 8px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 22px;
+  background-color: #692a7c;
+  color: #ffffff;
+}
+
+/* STYLING FOR INITIAL BOX */
+#userinitials {
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 6px 6px 6px 10px;
+  padding: 6px 26px; 
+}
