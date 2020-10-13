@@ -53,6 +53,9 @@ let questions = [
 
 // CREATING VARIABLES
 let runningQuestion = 0;
+let lastQuestion = questions.length - 1;
+const startTime = 30;
+let timer = startTime;
 
 // FUNCTION FOR RENDERING QUESTION
 function renderQuestion(){
@@ -74,5 +77,19 @@ function startQuiz(){
     heading.style.display = "none";
     quiz.style.display = "block";
     renderQuestion();
+    renderCounter();
+    clock = setInterval(renderCounter, 1000);
 }    
+
+// FUNCTION FOR RENDERING TIMER
+function renderCounter() {
+    let seconds = timer;
+    counter.innerHTML = "<p>" + 'Timer:' + `${seconds}` +"</p>";
+    timer--;
+
+    if (timer == -1){
+        alert("GAME OVER");
+        clearInterval(clock);
+    }
+}
     
