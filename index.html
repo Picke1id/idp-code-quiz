@@ -9,3 +9,45 @@
         <!--EXTERNAL CSS FILE-->
         <link rel="stylesheet" href="style.css"/>
     </head>
+    <body>
+        <header>
+            <!-- H1 -->
+            <h1> Code Quiz </h1>
+        </header>
+        <!-- CONTAINER TO HOLD QUIZ CONTENTS --> 
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <!-- H2 -->
+                    <h2 id="heading"> Code Quiz Challenge </h2>
+                    <!-- PLACEHOLDER FOR QUIZ TIMER -->
+                    <div id="timer">
+                        <div id="counter"></div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- RULES OF QUIZ-->
+                    <p id="rules"> Try to answer the following code-related questions before the timer runs out! Beware: If you answer a question incorrectly, you will lose more time! Good Luck! </p>
+                </div>
+                <!-- PLACEHOLDER FOR QUIZ QUESTIONS AND ANSWERS -->
+                <div id="quiz" style="display: none"> 
+                    <div id="question"></div>
+                    <div id="choices">
+                        <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                        <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                        <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                    </div>
+                    <!-- PLACEHOLDER TO VIEW SCORES -->
+                    <div id="scoreContainer" style="display: none"></div>
+                </div>
+                <div class="card-footer">
+                    <!-- START BUTTON FOR QUIZ-->
+                    <button id="start" class="btn"> Start Quiz </button>
+                </div>
+            </div>
+        </div>
+        <!-- EXTERNAL JAVASCRIPT FILE -->
+        <script src="script.js"></script>
+    </body>
+</html>
+
