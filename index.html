@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <!--TITLE-->
+        <title>Code Quiz</title>
+        <!--EXTERNAL CSS FILE-->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>Code Quiz</h1>
+        </header>
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+                        <div id="timer">
+                            <div id="counter"></div> 
+                        </div>
+                        <h2 id="heading">Code Quiz Challenge</h2>
+                    </div>
+                    <div class="card-body">
+                        <p id="rules">Try to answer the following code-related questions before the timer runs out! Correct answers will add time to your clock, while incorrect answers will subract time from your clock... Good Luck!</p>
+                    </div>
+                    <div id="quiz" style="display: none">
+                        <div id="question"></div>
+                        <div id="choices">
+                            <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                            <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                            <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                        </div>
+                        
+                          <!--   <div id="btimeGauge"></div>-->
+                          <!--   <div id="timeGauge"></div>  -->
+                        
+                    </div>
+                    <div id="scoreContainer" style="display: none"></div>
+                    <div class="card-footer">
+                        <button id="start" class="btn">Start Quiz</button>
+                    </div>
+                </div>
+            </div>  
+        <script src="script.js"></script>
+    </body>
+</html>
