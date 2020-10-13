@@ -50,3 +50,29 @@ let questions = [
         correct : "A"
     }
 ];
+
+// CREATING VARIABLES
+let runningQuestion = 0;
+
+// FUNCTION FOR RENDERING QUESTION
+function renderQuestion(){
+    let q = questions[runningQuestion];
+    
+    question.innerHTML = "<p>"+ q.question +"</p>";
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceC.innerHTML = q.choiceC;
+}
+
+// ACTIVATING START BUTTON
+start.addEventListener("click",startQuiz);
+
+// START QUIZ
+function startQuiz(){
+    start.style.display = "none";
+    rules.style.display = "none";
+    heading.style.display = "none";
+    quiz.style.display = "block";
+    renderQuestion();
+}    
+    
