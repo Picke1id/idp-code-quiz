@@ -1,0 +1,52 @@
+/* HEADER */
+header {
+  padding: 8px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  background-color: #692a7c;
+  color: #ffffff;
+}
+
+/* PLACEHOLDER FOR QUIZ CONTENTS */
+.container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/*STYLING FOR QUIZ */
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: hsl(206, 17%, 28%);
+  font-size: 18px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px 40px;
+  text-align: center;
+}
+
+/* STYLING FOR START BUTTON */
+.btn {
+  border: none;
+  background-color: #692a7c;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
