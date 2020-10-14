@@ -40,14 +40,20 @@
                     <!-- PLACEHOLDER TO INPUT INITIALS AND SAVE FINAL SCORE -->
                     <div id="end" style="display: none">
                         <!-- H3-->
-                        <h3 id="end-text"> All Done! </h3> 
+                        <h3 id="allDone"> All Done! </h3> 
                         <!-- PLACEHOLDER TO VIEW SCORE -->
                         <div id="scoreContainer" style="display: none"></div>
-                        <form class="end-form-container">
-                            <input type="text" name="name" id="userinitials" placeholder="Enter your initials">
-                            <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)">Save</button>
-                        </form>
-                        <div id="highscores" style="display: none"></div>    
+                        <div class="end-form-container">
+                            <input type="text" name="name" id="userInitials" placeholder="Enter your initials">
+                            <button class="btn" id="saveScoreBtn" type="submit">Save</button>
+                        </div>
+                        <!-- PLACEHOLDER FOR VIEWING HIGH SCORES -->
+                        <div id="highScores" style="display: none">
+                            <!-- H4 -->
+                            <h4 id="scoreHeading"> High Scores </h4>
+                            <div id="showHighScores"></div>
+                            <a href="index.html"><button class="btn" id="goBack" >Go Back</button></a>   
+                        </div>    
                     </div>
                 </div>
                 <div class="card-footer">
