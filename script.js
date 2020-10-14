@@ -9,6 +9,10 @@ const choiceC = document.getElementById("C");
 const counter = document.getElementById("counter");
 const scoreDiv = document.getElementById("scoreContainer");
 const end = document.getElementById("end");
+const saveScoreBtn = document.getElementById("saveScoreBtn");
+const highScores = document.getElementById("highScores");
+const userInitials = document.getElementById("userInitials");
+ 
 
 // CREATING QUESTIONS
 let questions = [
@@ -117,6 +121,7 @@ function checkAnswer(answer){
         choices.style.display = "none";
         counter.style.display = "none";
         scoreRender();
+        clearInterval(clock)
         end.style.display = "";
     }
 }
@@ -139,4 +144,29 @@ function scoreRender(){
     
     scoreDiv.innerHTML += "<p>"+ 'Your final score is' + ' ' +timer + '!' +"</p>";
 }
-    
+
+// EVENT FOR SAVING & VIEWING HIGH SCORES
+saveScoreBtn.addEventListener("click",saveHighScore);
+
+// FUNCTION FOR SAVING & VIEWING SCORES
+function saveHighScore(){
+    scoreDiv.style.display = "none";
+    allDone.style.display = "none";
+    userInitials.style.display = "none";
+    saveScoreBtn.style.display = "none";
+    highScores.style.display = "";
+    var results = "<p>"+ userInitials.value + ' - ' +timer +"</p>"; 
+    localStorage.setItem("showit", results);
+    document.getElementById("showHighScores").innerHTML = localStorage.getItem("showit"); 
+}
+
+// EVENT FOR RETURNING TO QUIZ
+goBack.addEventListener("click", returnHome);
+
+// FUNCTION FOR RETURNING HOME
+function returnHome(){
+    highScores.style.display = "none";
+    quiz.style.display = "block";
+    renderQuestion();
+    renderCounter();
+}
