@@ -32,7 +32,7 @@ header {
   text-align: center;
 }
 
-/* STYLING FOR START BUTTON */
+/* STYLING FOR ALL BUTTONS */
 .btn {
   border: none;
   background-color: #692a7c;
@@ -70,7 +70,7 @@ header {
 }
 
 /* STYLING FOR H3 */
-#end-text {
+#allDone {
   padding: 8px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 22px;
@@ -79,7 +79,7 @@ header {
 }
 
 /* STYLING FOR INITIAL BOX */
-#userinitials {
+#userInitials {
   display: inline-block;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
@@ -88,4 +88,14 @@ header {
   line-height: 22px;
   margin: 6px 6px 6px 10px;
   padding: 6px 26px; 
+}
+
+/* STYLING FOR H4 */
+#scoreHeading {
+  padding: 8px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 22px;
+  background-color: #692a7c;
+  color: #ffffff;
+
 }
