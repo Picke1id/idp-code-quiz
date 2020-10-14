@@ -7,6 +7,8 @@ Built with Visual Code Studio
 ## Code Example
 Here is an example of how the password generator works:
 
+![Code Quiz Demo](CodeQuizDemo.gif)
+
 ## Features
 * Responsive user interface
 * HTML and CSS powered by Javascript
