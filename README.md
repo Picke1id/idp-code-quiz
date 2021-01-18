@@ -25,3 +25,6 @@ After the repository has been cloned, click on the index.html and open in browse
 > You can reference the full license [here](https://github.com/Picke1id/idp-code-quiz/blob/main/LICENSE).
 
 This project is licensed under the terms of the MIT license.
+
+## Link
+* Code Quiz URL: (https://picke1id.github.io/idp-code-quiz/)
